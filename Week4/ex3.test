@@ -1,0 +1,33 @@
+percent_to_gpv|100|'maximum value'|4.0
+percent_to_gpv|85|'minimum 4.0 vlaue'|4.0
+percent_to_gpv|84|'maximum 3.7 value'|3.7
+percent_to_gpv|80|'minimum 3.7 value'|3.7
+percent_to_gpv|79|'maximum 3.3 value'|3.3
+percent_to_gpv|77|'minimum 3.3 value'|3.3
+percent_to_gpv|76|'maximum 3.0 value'|3.0
+percent_to_gpv|73|'minimum 3.0 value'|3.0
+percent_to_gpv|72|'maximum 2.7 value'|2.7
+percent_to_gpv|70|'minimum 2.7 value'|2.7
+percent_to_gpv|69|'maximum 2.3 value'|2.3
+percent_to_gpv|67|'minimum 2.3 value'|2.3
+percent_to_gpv|66|'maximum 2.0 value'|2.0
+percent_to_gpv|63|'minimum 2.0 value'|2.0
+percent_to_gpv|62|'maximum 1.7 value'|1.7
+percent_to_gpv|60|'minimum 1.7 value'|1.7
+percent_to_gpv|59|'maximum 1.3 value'|1.3
+percent_to_gpv|57|'minimum 1.3 value'|1.3
+percent_to_gpv|56|'maximum 1.0 value'|1.0
+percent_to_gpv|53|'minimum 1.0 value'|1.0
+percent_to_gpv|52|'maximum 0.7 value'|0.7
+percent_to_gpv|50|'minimum 0.7 value'|0.7
+percent_to-gpv|49|'maximum 0.0 value'|0.0
+percent_to_gpv|0|'minimum 0.0 value'|0.0
+card_namer|'A', 'D'|'Ace and Diamonds'|'Ace of Diamonds'
+card_namer|'5', 'C'|'5 and Clubs'|'5 of Clubs'
+card_namer|'T', 'H'|'T and Hearts'|'10 of Hearts'
+card_namer|'J', 'S'|'J and Spades'|'Jack of Spades'
+card_namer|'Q', 'D'|'Q and Diamonds'|'Queen of Diamonds'
+card_namer|'K', 'C'|'K and Clubs'|'King of Clubs'
+card_namer|'K', 'A'|'CHEATERS'|'CHEATRER!'
+
+

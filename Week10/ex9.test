@@ -1,0 +1,26 @@
+setup|parallelogram|Parallelogram(10, 10, 90)
+parallelogram._base|'check base'|10
+parallelogram._side|'check side'|10
+parallelogram._theta|'check theta'|90
+parallelogram.__str__()|'print content'|'I am a Parallelogram with area 100.0'
+parallelogram.area()|'check area'|100
+parallelogram.bst()|'check list'|[10.0, 10.0, 90.0]
+setup|rectangle|Rectangle(10, 20)
+rectangle._base|'check base'|10
+rectangle._side|'check side'|20
+rectangle._theta|'check theta'|90
+rectangle.__str__()|'print content'|'I am a Rectangle with area 200.0'
+rectangle.area()|'check area'|200
+rectangle.bst()|'check list'|[10.0, 20.0, 90.0]
+setup|rhombus|Rhombus(10, 30)
+rhombus._base|'check base'|10
+rhombus._side|'check side'|10
+rhombus._theta|'check theta'|30
+rhombus.bst()|'check list'|[10.0, 10.0, 30.0]
+setup|square|Square(10)
+square._base|'check base'|10
+square._side|'check side'|10
+square._theta|'check theta'|90
+square.__str__()|'print content'|'I am a Square with area 100.0'
+square.area()|'check area'|100
+square.bst()|'check list'|[10.0, 10.0, 90.0]

@@ -1,0 +1,60 @@
+setup|father|Male('12345')
+setup|mother|Female('67890')
+father.set_by_pos(0, 0, 'AC')|'setting a new nucleotide for father'|None
+father.set_by_pos(0, 0, 'CA')|'setting a new nucleotide for father'|None
+father.get_by_pos(0 ,0)|'get the nucleotide'|'CA'
+father.set_by_pos(0, 0, 'AC')|'setting a new nucleotide for father'|None
+father.set_by_pos(22, 22, "GT")|'setting a new nucleotide for father'|None
+mother.set_by_pos(0, 0, 'GT')|'setting a new nucleotide for mother'|None
+mother.set_by_pos(1, 1, 'TC')|'setting a new nucleotide for mother'|None
+father.set_marker('rs12345', 0, 0)|'setting a marker for specific psotion'|None
+father.set_marker('sa12345', 2, 2)|'setting a marker for psotion without nucleotide'|None
+mother.set_marker('ss12345', 0, 0)|'setting a marker for position'|None
+mother.set_marker('sc12345', 2, 2)|'setting a marker for positon without nucleotide'|None
+father.set_by_marker('rs12345', 'CA')|'change the nucleotide'|None
+father.set_by_marker('sa12345', 'GC')|'add nucleotide by marker'|None
+mother.set_by_marker('ss12345', 'TG')|'change the nucleotide'|None
+mother.set_by_marker('sc12345', 'GA')|'add nucleotide by marker'|None
+father.get_by_pos(0 ,0)|'get the nucleotide'|'CA'
+father.get_by_pos(22, 22)|'get the nucleotide'|'GT'
+father.get_by_pos(2, 2)|'get the nucleotide'|'GC'
+mother.get_by_pos(0, 0)|'get the nucleotide'|'TG'
+mother.get_by_pos(1, 1)|'get the nucleotide'|'TC'
+mother.get_by_pos(2, 2)|'get the nucleotide'|'GA'
+father.get_by_marker('rs12345')|'get the nucleotide by marker'|'CA'
+father.get_by_marker('sa12345')|'get the nucleotide by marker'|'GC'
+mother.get_by_marker('ss12345')|'get the nucleotide by marker'|'TG'
+mother.get_by_marker('sc12345')|'get the nucleotide by marker'|'GA'
+setup|c|father.get_chromosome(0)
+c.get_by_pos(0)|'get nucleotide'|'CA'
+c.get_by_marker('rs12345')|'get nucleotide by marker'|'CA'
+mother.set_chromosome(0, c)|"setting father's chromosome to mother"|None
+setup|b|mother.get_chromosome(0)
+b.get_by_pos(0)|'get nucleotide'|'CA'
+b.get_by_marker('rs12345')|'get nucleotide by marker'|'CA'
+c.set_by_pos(0, 'AC')|'set nucleotide'|None
+b.get_by_pos(0)|'get nucleotide'|'AC'
+b.set_by_pos(0, 'CA')|'set nucleotide'|None
+setup|query|Query()
+query.set_by_pos(0, 0, 'CA')|'set nucleotide'|None
+query.set_by_pos(22, 22, '2T')|'set nucleotide'|None
+query.set_by_pos(2, 2, '21')|'set nucleotide'|None
+query.set_marker('rs12345', 0, 0)|'set marker'|None
+query.set_by_marker('rs12345', '1A')|'set by marker'|None
+father.test(query)|'test the query'|True
+query.set_by_pos(2, 2, '12')|'set nucleotide'|None
+father.test(query)|'test the query'|False
+setup|binder1|Binder()
+binder1.set_sex('M')|'set sex'|None
+binder1.set_by_pos(0, 0, 'LM')|'set maternal'|None
+binder1.set_by_pos(2, 2, 'RM')|'set maternal'|None
+setup|child1|mother.procreate(father, binder1)
+child1.get_by_pos(0, 0)|'get nucleotide'|'CA'
+child1.get_by_pos(2, 2)|'get nucleotide'|'GA'
+setup|binder2|Binder()
+binder2.set_sex('F')|'set sex'|None
+binder2.set_by_pos(0, 0, 'LM')|'set maternal'|None
+binder2.set_by_pos(2, 2, 'LM')|'set maternal'|None
+setup|child2|mother.procreate(father, binder2)
+child2.get_by_pos(0, 0)|'get nucleotide'|'CA'
+child2.get_by_pos(2, 2)|'get nucleotide'|'GC'

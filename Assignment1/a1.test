@@ -1,0 +1,15 @@
+pair_model('A', 'T')|'simple'|True
+pair_model('A', 'G')|'simple'|False
+pair_model('ATGCGTAGC', 'TACGCATCG')|'simple'|True
+pair_model('GCTAGTAC', 'CGTGACG')|'simple'|False
+zip_length('AGTGCGCACACT')|'4 zip'|4
+zip_length('CGACG')|'2 zip'|2
+zip_length('TAGCTA')|'3 zip'|3
+zip_length('GTCAGCTAGCT')|'can be zip'|0
+splice_gene(['A', 'C', 'G', 'T', 'C', 'A', 'T', 'A', 'G'], ['C', 'G', 'A', 'C', 'A'], 'CG', 'CA')|'positive order'|
+splice_gene(['A', 'C', 'G', 'T', 'C', 'A', 'T', 'A', 'G'], ['C', 'G', 'A', 'C', 'A'], 'CG', 'TA')|'no splice'|
+splice_gene(['A', 'C', 'G', 'T', 'C', 'A', 'T', 'A', 'G'], ['C', 'G', 'A', 'C', 'A'], 'TG', 'CA')|'negative order'|
+match_mask('ATGCGATCATCGAT', 'G[CG]T')|'can be mask'|3
+match_mask('ATGATGATG', 'T*[CT]')|'first one'|0
+match_mask('GCTGATC', 'C[AC]')|'no mask'|-1
+match_mask('ATGGAGTAGAC', 'AA[CT]C')|'find in 0'|0

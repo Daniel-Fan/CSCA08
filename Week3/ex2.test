@@ -1,0 +1,11 @@
+percentage|0,1|"Minimum mark value"|0
+percentage|10,10|"Maximum mark value"|100
+percentage|12.75,25.5|"Intermediate value with floats"|50
+contribution|12,20,10|"Intermediate values"|6
+term_work_mark|25,50,100,10,5,50|"dafault marks"|60
+term_work_mark|20,35,75,5,4,30|"test marks"|38.9
+final_mark|25,50,100,10,5,50,100|"default marks"|100
+final_mark|20,35,75,5,4,30,60|"test marks"|62.9
+is_pass|25, 45, 75, 8, 4, 45, 41|"passed test"|True
+is_pass|20, 45, 70, 8, 4, 40, 39|"failed test(final_exam)"|False
+is_pass|5, 5, 7, 5, 3, 35, 41|"failed test(final_exam)"|False

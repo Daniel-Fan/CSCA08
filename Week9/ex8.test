@@ -1,0 +1,12 @@
+setup|lightswitch|LightSwitch(True)
+lightswitch._status|'check state in constructor'|True
+lightswitch.turn_off()|'check turn off method'|None
+lightswitch.turn_on()|'check turn on method'|None
+lightswitch.flip()|'check flip method'|None
+lightswitch.__str__()|'check __str__ method'|'I am off'
+setup|switchboard|SwitchBoard(1024)
+switchboard._quantity|'check quantity'|1024
+switchboard.__str__()|'check print line'|'The following switches are on: '
+switchboard.flip_every(1)|'chenk flip_every method'|None
+switchboard.reset()|'check reet method'|None
+switchboard.which_switch()|'check which_switch method'|[]

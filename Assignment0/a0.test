@@ -1,0 +1,15 @@
+split_input|'TCGACCATGGCTAATGCGA'|'exist three elements'|['TCGACC', 'ATGGCTA', 'ATGCGA']
+split_input|'TTACGATGGAAAT'|'the gene is not found'|['TTACG', '', 'ATGGAAAT']
+split_input|'ATGGGATGGGT'|'there is no upstream'|['', 'ATGGG', 'ATGGGT']
+get_gene|'TGGATCGTATGATTGGTATGCGT'|'there exists a gene'|'ATGATTGGT'
+get_gene|'TGGAATTATGACTG'|'no gene'|'ERROR'
+validate_gene|'AATGCT'|'not start with codon'|False
+validate_gene|'ATG'|'no codon after start codon'|False
+validate_gene|'ATGGCTGA'|'not contain full codon'|False
+validate_gene|'ATGGGGATC'|'contain four consecutive indentical nucleotides'|False
+is_palindromic|'ATGGCGGTA'|'is palindromic'|True
+is_palindromic|'ATGGGCACG'|'not palindromic'|False
+evaluate_sequence|'CGTAGAATGGGTA'|'no gene'|"No Gene Found"
+evaluate_sequence|'ATCGATGCGCCGCGTAATGCGA'|'palindromic'|"Valid Palindromic Gene Found"
+evaluate_sequence|'GCTAGATGGTCAGGATGCGA'|'valid gene'|"Valid Gene Found"
+evaluate_sequence|'CGTAAGTATGGCCGATGGCT'|'invalid gene'|"Invalid Gene"

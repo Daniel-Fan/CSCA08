@@ -1,0 +1,8 @@
+insert|[1, 2, 3, 4, 5], ['a','b','c'], 3|'list'|[1, 2, 3, 'a', 'b', 'c', 4, 5]
+insert|'abcdefg', 'hijklmn', 4|'string'|'abcdhijklmnefg'
+up_to_first|['a', 'b', 'f', 'v'], 'v'|'list and exist'|['a', 'b', 'f']
+up_to_first|'asdfghjkl', 'f'|'string and exist'|'asd'
+up_to_first|[1, 2, 3, 4], 5|'list and do not exist'|[1, 2, 3, 4]
+up_to_first|'asdfg', 'h'|'string and do not exist'|'asdfg'
+cut_list|[0,1,2,3,4,5,6,7,8,9], 3|'list'|[4, 5, 6, 7, 8, 9, 3, 0, 1, 2]
+cut_list|"ABCDEFGX1234",7|'string'|'1234XABCDEFG'

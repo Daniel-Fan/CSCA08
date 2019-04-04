@@ -1,0 +1,6 @@
+position_of_name('LAST')|'LAST'|0
+position_of_name('FIRST')|'FIRST'|1
+position_of_name('E-MAIL')|'E-MAIL'|2
+position_of_name('AGE')|'AGE'|3
+position_of_name('GENDER')|'GENDER'|4
+update_field(my_dict, 'sclause', 'AGE', 999)|'replace age with 999'|

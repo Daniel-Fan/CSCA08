@@ -1,0 +1,6 @@
+copy_me([3, 5 ,'sad', True])|'int, str and boolean'|[4, 6, 'SAD', False]
+copy_me(['SDF', False])|'str and boolean'|['SDF', True]
+copy_me([[1,2,3], [2,3,4]])|'list'|['List', 'List']
+mutate_me([3, 5 ,'sad', True])|'int, str and boolean'|
+mutate_me(['SDF', False])|'str and boolean'|
+mutate_me([[1,2,3], [2,3,4]])|'list'|
